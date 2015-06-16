@@ -1,0 +1,13 @@
+---
+- name: Check if Oh My Fish is installed
+  shell: which -s omf
+  register: check_omf
+  ignore_errors: true
+
+- name: Clone oh-my-fish repo
+  shell: curl -L https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish | fish
+  when: check_omf.rc == 1
+  ignore_errors: true
+
+- name: Install plugins
+  shell: omf install

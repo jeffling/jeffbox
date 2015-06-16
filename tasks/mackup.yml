@@ -1,0 +1,5 @@
+- name: use mackup
+  shell: "mackup restore"
+
+- name: Remove vim bundles (mackup doesn't sync them right)
+  shell: rm -rf {{ home_dir }}/.vim/bundles

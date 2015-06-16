@@ -1,0 +1,9 @@
+---
+- name: Install node stable
+  command: n stable
+  register: nvm_install_result
+  changed_when: "nvm_install_result.stdout == ''"
+
+- name: Install npm packages
+  npm: name={{ item }} global=yes
+  with_items: npm_modules

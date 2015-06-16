@@ -1,0 +1,51 @@
+---
+- hosts: all
+  vars:
+    user: jeff
+    home_dir: "/Users/{{ user }}"
+    application_dir: "{{ home_dir }}/Applications"
+    caskroom_dir: /opt/homebrew-cask/Caskroom
+    user_lib: "/Users/{{ user }}/Library"
+    user_lib_prefs: "{{ user_lib }}/Preferences"
+    homebrew_cask_packages:
+      - alfred
+      - flux
+      - firefox
+      - google-chrome
+      - google-chrome-canary
+      - vlc
+      - kaleidoscope
+      - appcleaner
+      - google-drive
+      - sublime-text3
+      - transmission
+      - karabiner
+      - mou
+      - recordit
+      - dropbox
+      - caffeine
+    homebrew_packages:
+      - mackup
+      - hub
+      - fish 
+      - mongodb
+      - wget
+      - htop
+      - tmux
+      - n
+      - redis
+      - mysql
+      - reattach-to-user-namespace
+    npm_modules:
+      - node-inspector
+      - mocha
+      - coffee-script
+      - grunt
+
+  tasks:
+      - include: tasks/homebrew.yml tags=homebrew
+      - include: tasks/npm.yml tags=npm
+      - include: tasks/mackup.yml tags=mackup
+      - include: tasks/fish.yml tags=fish
+
+
