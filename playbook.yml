@@ -24,6 +24,7 @@
       - recordit
       - dropbox
       - caffeine
+      - spotify
     homebrew_packages:
       - mackup
       - hub
