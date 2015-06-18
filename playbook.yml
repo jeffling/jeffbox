@@ -25,6 +25,8 @@
       - dropbox
       - caffeine
       - spotify
+      - java
+      - skype
     homebrew_packages:
       - mackup
       - hub
@@ -37,6 +39,7 @@
       - redis
       - mysql
       - reattach-to-user-namespace
+      - leiningen
     npm_modules:
       - node-inspector
       - mocha
