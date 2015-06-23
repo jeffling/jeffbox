@@ -27,7 +27,11 @@
       - spotify
       - java
       - skype
+      - intellij-idea 
+      - caskroom/homebrew-versions/java6
+      - vagrant 
     homebrew_packages:
+      - watchman
       - mackup
       - hub
       - fish 
